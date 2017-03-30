@@ -59,7 +59,11 @@ gulp.task('devLess', function () {
 });
 
 gulp.task('watch', function(){
-    gulp.watch('./src/less/styles.less', ['devLess']);
+    gulp.watch([
+        './src/**/*.less',
+        './src/components/**/*.less',
+        './src/pages/**/*.less'
+    ], ['devLess']);
 });
 
 
