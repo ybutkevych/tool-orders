@@ -9,7 +9,9 @@ var require = {
         "text":                 "../node_modules/requirejs-text/text",
         "jquery":               "../node_modules/jquery/dist/jquery.min",
         "jsteps":               "../node_modules/jquery-steps/build/jquery.steps.min",
-        "bootstrap":            "../node_modules/bootstrap/dist/js/bootstrap.min"
+        "bootstrap":            "../node_modules/bootstrap/dist/js/bootstrap.min",
+        "datetimepicker":       "../node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min",
+        "moment":                "../node_modules/moment/min/moment.min"
     },
     shim: {
         ko: {
@@ -20,6 +22,9 @@ var require = {
         },
         bootstrap: {
             deps: ["jquery"]
+        },
+        datetimepicker: {
+            deps: ["jquery", "bootstrap", "moment"]
         }
     }
 };

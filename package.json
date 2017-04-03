@@ -18,10 +18,12 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "crossroads": "^0.12.2",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "hasher": "^1.2.0",
     "jquery": "^3.2.1",
     "jquery-steps": "^1.1.0",
     "knockout": "^3.4.1",
+    "moment": "^2.18.1",
     "requirejs": "^2.3.2",
     "requirejs-text": "^2.0.12"
   }

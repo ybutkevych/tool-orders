@@ -1,4 +1,10 @@
-define(['knockout', './router', './components.config'], function (ko, router, components) {
+define([
+    'knockout',
+    './router',
+    './components.config',
+    './koBindings',
+    'bootstrap'
+], function (ko, router, components) {
 
     // Register all page-components in knockout
     components.pages.forEach(register);
