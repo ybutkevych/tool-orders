@@ -19,10 +19,12 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
             'components/app/app',
             'components/nav-bar/nav-bar',
             'components/sidebar/sidebar',
+            'components/wizard/wizard',
             'pages/home/home',
             'pages/toolOrders/toolOrders',
             'pages/settings/settings',
-            'pages/help/help'
+            'pages/help/help',
+            'pages/newOrder/newOrder'
         ],
         insertRequire: ['app/startup'],
         bundles: {
@@ -54,8 +56,9 @@ gulp.task('less', function(){
 gulp.task('devLess', function () {
    return gulp.src('./src/less/styles.less')
        .pipe(less())
+       .pipe(replace(/url\((')?\.\.\/fonts\//g, 'url($1fonts/'))
        .pipe(concat('styles.css'))
-       .pipe(gulp.dest('./src/css/'));
+       .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('watch', function(){

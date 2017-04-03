@@ -8,7 +8,6 @@ define(["knockout", "text!./order.html"], function(ko, template) {
         activate();
 
         function activate() {
-            console.log("Hello");
         }
     }
 

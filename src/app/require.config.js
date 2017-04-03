@@ -8,6 +8,7 @@ var require = {
         "signals":              "../node_modules/signals/dist/signals.min",
         "text":                 "../node_modules/requirejs-text/text",
         "jquery":               "../node_modules/jquery/dist/jquery.min",
+        "jsteps":               "../node_modules/jquery-steps/build/jquery.steps.min",
         "bootstrap":            "../node_modules/bootstrap/dist/js/bootstrap.min"
     },
     shim: {
