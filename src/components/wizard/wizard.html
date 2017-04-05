@@ -35,9 +35,31 @@
     <h3>Tools</h3>
     <section params="{ header: 'Header 2' }">
         <p>Select Tools to deliver</p>
+        <button type="button" class="btn btn-default"
+            data-bind="click: addTool">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"> Add
+        </button>
+        <br/>
+        <!-- ko foreach: tools -->
+        <div class="row">
+            <div class="col-lg-4 col-xs-4">
+                <input type="text" placeholder="Tool name" data-bind="value: $data.name" class="form-control" aria-label="...">
+            </div>
+            <div class="col-xs-2">
+              <select class="form-control" data-bind="options: $parent.availableToolCounts,
+                  value: $data.count,
+                  valueAllowUnset: true,
+                  valueUpdate: 'change'"></select>
+            </div>
+            <button type="button" class="btn btn-default" data-bind="click: $parent.removeTool">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+        </div>
+        <!-- /ko -->
+        </br>
     </section>
     <h3>Delivery</h3>
     <section>
-        <p>The next and previous buttons help you to navigate through your content.</p>
+        <p>Thank you for your order, delivery options coming soon.</p>
     </section>
 </div>

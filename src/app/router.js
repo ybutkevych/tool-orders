@@ -28,6 +28,7 @@ define(["knockout", "crossroads", "hasher"], function(ko, crossroads, hasher) {
     function activateCrossroads() {
         function parseHash(newHash, oldHash) { crossroads.parse(newHash); }
         crossroads.normalizeFn = crossroads.NORM_AS_OBJECT;
+        hasher.prependHash = '';
         hasher.initialized.add(parseHash);
         hasher.changed.add(parseHash);
         hasher.init();
