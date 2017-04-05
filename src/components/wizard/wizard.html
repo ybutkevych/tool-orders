@@ -3,15 +3,15 @@
     <section>
         <form class="form-horizontal">
           <div class="form-group">
-            <label for="inputJobId" class="col-sm-2 control-label">Job Id</label>
-            <div class="col-sm-10 input-group   ">
-              <input type="email" class="form-control" id="inputJobId" placeholder="Job Id">
+            <label for="inputOrderId" class="col-sm-2 control-label">Order Id</label>
+            <div class="col-sm-10 input-group">
+              <input type="text" class="form-control" id="inputOrderId" placeholder="Order Id" data-bind="value: orderId">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputOrderedBy" class="col-sm-2 control-label">Ordered By</label>
+            <label for="inputJobId" class="col-sm-2 control-label">Job Id</label>
             <div class="col-sm-10 input-group">
-              <input type="password" class="form-control" id="inputOrderedBy" placeholder="Ordered By">
+              <input type="text" class="form-control" id="inputJobId" placeholder="Job Id" data-bind="value: jobId">
             </div>
           </div>
           <div class="form-group datepicker">
@@ -23,6 +23,12 @@
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
               </div>
+          </div>
+          <div class="form-group">
+            <label for="inputOrderedBy" class="col-sm-2 control-label">Ordered By</label>
+            <div class="col-sm-10 input-group">
+              <input type="text" class="form-control" id="inputOrderedBy" placeholder="Ordered By" data-bind="value: orderedBy">
+            </div>
           </div>
         </form>
     </section>

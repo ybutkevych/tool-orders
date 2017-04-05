@@ -1,6 +1,42 @@
-<h2>Specific Tool Order</h2>
+<h2>Tool Order</h2>
 
-<p>
-    Tool order - <span data-bind='text: orderId'></span>.
-    Tool number - <span data-bind='text: toolNumber'></span>.
-</p>
+<!-- ko if: isLoading -->
+<div class="loader"></div>
+<!-- /ko -->
+
+<!--ko ifnot: isLoading -->
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputOrder" class="col-sm-2 control-label">Order</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="inputOrder" data-bind="value: order().order" readonly>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputStatus" class="col-sm-2 control-label">State</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="inputStatus" data-bind="value: order().state" readonly>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPriority" class="col-sm-2 control-label">Priority</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="inputPriority" data-bind="value: order().priority" readonly>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputOrderedBy" class="col-sm-2 control-label">Ordered By</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="inputOrderedBy" data-bind="value: order().orderedBy" readonly>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputTools" class="col-sm-2 control-label">Tools</label>
+    <div class="col-sm-10">
+        <!-- ko foreach: order().tools -->
+        &#9679;&nbsp;<span data-bind='text: $data'></span></br>
+        <!-- /ko -->
+    </div>
+  </div>
+</form>
+<!-- /ko -->
