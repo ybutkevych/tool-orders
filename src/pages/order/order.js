@@ -4,11 +4,12 @@ define([
     "text!../../data/data.json",
     "../../helpers/localStorageProvider"
 ], function(ko, template, data, localStorageProvider) {
-    var self = this;
-    this.isLoading = ko.observable(false);
-    this.order = ko.observable({});
 
     function OrderViewModel(route) {
+        var self = this;
+
+        this.isLoading = ko.observable(false);
+        this.order = ko.observable({});
         self.orderId = route.id;
 
         activate();

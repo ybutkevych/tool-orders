@@ -22,6 +22,7 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
             'components/wizard/wizard',
             'pages/home/home',
             'pages/toolOrders/toolOrders',
+            'pages/order/order',
             'pages/settings/settings',
             'pages/help/help',
             'pages/newOrder/newOrder',
@@ -103,7 +104,7 @@ gulp.task('webserver', function () {
     gulp.src('')
         .pipe(webserver({
             livereload : true,
-            port : 8050,
+            port : 8053,
             directoryListing : true,
             open : 'http://localhost:8050/src/index.html'
         }));
